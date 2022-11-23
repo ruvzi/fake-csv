@@ -1,6 +1,8 @@
 # fake-csv
 
-Create fakle CSV data
+Create fake CSV data
+
+Install gems with `bundle install`
 
 Update `template.yml` with fake CSV definition
 
