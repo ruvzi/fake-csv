@@ -33,4 +33,24 @@ class FakeData
     Faker::Config.locale = locale
     Faker::Address.postcode
   end
+
+  def enum(options)
+    list = options[:list]
+    return list.shuffle.first unless list.first.kind_of?(Hash)
+
+    list_options = {}
+    list.each { |l| list_options[l[:value]] = l[:weight] }
+    weighted_option(list_options)
+  end
+
+  private
+
+  def weighted_option(options)
+    current, max = 0, options.values.inject(:+)
+    random_value = rand(max) + 1
+    options.each do |key,val|
+       current += val
+       return key if random_value <= current
+    end
+  end
 end

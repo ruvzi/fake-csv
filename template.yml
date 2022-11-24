@@ -1,5 +1,5 @@
 ---
-rows: 20
+rows: 20000
 data:
 - name: name
   type: name
@@ -10,3 +10,17 @@ data:
     max: 100
 - name: postcode
   type: postcode
+- name: gender
+  type: enum
+  options:
+    list:
+    - m
+    - f
+- name: ethnicity
+  type: enum
+  options:
+    list:
+    - value: white
+      weight: 70
+    - value: black
+      weight: 30
