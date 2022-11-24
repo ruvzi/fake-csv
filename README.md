@@ -1,6 +1,6 @@
 # fake-csv
 
-Create fake CSV data
+Create fake CSV data with [faker-ruby](https://github.com/faker-ruby/faker)
 
 Install gems with `bundle install`
 
@@ -46,6 +46,11 @@ Generates a date between min and max values
 ### postcode
 
 Generates a UK style postcode
+
+```
+- name: postcode
+  type: postcode
+```
 
 ### id
 
