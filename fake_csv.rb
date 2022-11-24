@@ -3,6 +3,21 @@
 require_relative './csv_data'
 require_relative './fake_data'
 
+Psych::ClassLoader::ALLOWED_PSYCH_CLASSES = [ Date ]
+
+module Psych
+  class ClassLoader
+    ALLOWED_PSYCH_CLASSES = [] unless defined? ALLOWED_PSYCH_CLASSES
+    class Restricted < ClassLoader
+      def initialize classes, symbols
+        @classes = classes + Psych::ClassLoader::ALLOWED_PSYCH_CLASSES.map(&:to_s)
+        @symbols = symbols
+        super()
+      end
+    end
+  end
+end
+
 yaml_contents = File.read('template.yml')
 template = YAML.safe_load(yaml_contents, symbolize_names: true)
 

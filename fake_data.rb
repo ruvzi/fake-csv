@@ -18,15 +18,26 @@ class FakeData
   end
 
   def name
-    Faker::Name.name
+    "#{Faker::Name.first_name} #{Faker::Name.last_name}"
   end
 
-  def age(options = {})
+  def id
+    Faker::IDNumber.valid
+  end
+
+  def integer(options = {})
     args = {}
     args[:from] = options[:min] if options.key?(:min)
     args[:to] = options[:max] if options.key?(:max)
     Faker::Number.between(**args)
   end
+
+  def date(options = {})
+  args = {}
+  args[:from] = options[:min] if options.key?(:min)
+  args[:to] = options[:max] if options.key?(:max)
+  Faker::Date.between(**args)
+end
 
   def postcode(options = {})
     locale = options[:local] || 'en-GB'

@@ -3,7 +3,7 @@
 require 'csv'
 
 class CsvData
-  OUTPUT = 'output.csv'
+  OUTPUT = 'fake.csv'
 
   def initialize(headers, rows)
     @headers = headers

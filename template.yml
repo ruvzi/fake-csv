@@ -1,13 +1,18 @@
 ---
-rows: 20000
+rows: 20
 data:
 - name: name
   type: name
 - name: age
-  type: age
+  type: integer
   options:
     min: 18
     max: 100
+- name: dob
+  type: date
+  options:
+    min: 1930-01-01
+    max: 2020-01-01
 - name: postcode
   type: postcode
 - name: gender
@@ -24,3 +29,12 @@ data:
       weight: 70
     - value: black
       weight: 30
+- name: hospital_id
+  type: enum
+  options:
+    list:
+    - hosp1234
+    - hosp5678
+- name: patient_id
+  type: id
+
