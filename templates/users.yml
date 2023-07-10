@@ -1,0 +1,19 @@
+---
+rows: 20
+data:
+  - name: id
+    type: index
+  - name: name
+    type: name
+  - name: email
+    type: email
+  - name: user_role
+    type: any_of_list
+    options:
+      global_admin: 5
+      greenstep_user: 5
+      user: 10
+  - name: job_title
+    type: name
+  - name: phone
+    type: phone

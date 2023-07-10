@@ -1,0 +1,20 @@
+---
+rows: 240
+data:
+  - name: user_id
+    type: cycle
+    options:
+      min: 1
+      max: 20
+  - name: company_id
+    type: integer
+    options:
+      min: 1
+      max: 40
+  - name: company_user_role
+    type: enum
+    options:
+      list:
+        - normal_user
+        - specific_admin
+        - global_admin

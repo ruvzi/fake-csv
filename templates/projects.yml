@@ -1,0 +1,29 @@
+---
+rows: 200
+data:
+  - name: id
+    type: index
+  - name: name
+    type: app_name
+  - name: company_id
+    type: integer
+    options:
+      min: 1
+      max: 40
+  - name: project_manager_id
+    type: integer
+    options:
+      min: 1
+      max: 20
+  - name: status
+    type: enum
+    options:
+      list:
+        - in_progress
+        - open
+        - close
+  - name: start_date
+    type: date
+    options:
+      min: 2023-05-01
+      max: today

@@ -1,17 +1,15 @@
 # frozen_string_literal: true
 
 require 'csv'
-
 class CsvData
-  OUTPUT = 'fake.csv'
-
-  def initialize(headers, rows)
+  def initialize(headers, rows, output_file)
     @headers = headers
     @rows = rows
+    @output_file = output_file
   end
 
   def write
-    CSV.open(OUTPUT, 'w') do |csv|
+    CSV.open(@output_file, 'w') do |csv|
       csv << @headers
       @rows.each do |row|
         csv << row

@@ -1,0 +1,30 @@
+---
+rows: 200
+data:
+  - name: id
+    type: index
+  - name: name
+    type: cycle
+    options:
+      list:
+        - Accounting
+        - Payroll
+        - Customer Relationship
+        - Feedback
+  - name: company_id
+    type: any_of_list
+    options:
+      1: 4
+      2: 4
+      3: 4
+      4: 4
+      5: 4
+      6: 4
+      7: 4
+      8: 4
+      9: 4
+      10: 4
+      min: 11
+      max: 40
+  - name: uuid
+    type: uuid

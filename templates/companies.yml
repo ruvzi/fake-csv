@@ -1,0 +1,26 @@
+---
+rows: 40
+data:
+  - name: id
+    type: index
+  - name: name
+    type: company_name
+  - name: business_id
+    type: company_business_id
+  - name: greenstep_customer_id
+    type: company_business_id
+  - name: communication_language
+    type: enum
+    options:
+      list:
+        - en
+        - fi
+        - sv
+  - name: accounting_system
+    type: word
+  - name: payroll_system
+    type: word
+  - name: active
+    type: boolean
+  - name: uuid
+    type: uuid
