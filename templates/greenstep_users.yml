@@ -18,3 +18,5 @@ data:
         - normal_user
         - specific_admin
         - global_admin
+  - name: uuid
+    type: uuid

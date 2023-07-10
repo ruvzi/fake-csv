@@ -4,9 +4,9 @@ Create fake CSV data with [faker-ruby](https://github.com/faker-ruby/faker)
 
 Install gems with `bundle install`
 
-Update `template.yml` with fake CSV definition
+Update or create `templates/template.yml` with fake CSV definition
 
-Run `ruby fake_csv.rb` to produce the output file `fake.csv`
+Run `bundle exec ruby fake_csv.rb template` to produce the output file `csv/template.csv`
 
 ## Supported Data
 
@@ -81,12 +81,6 @@ Selects a value from a supplied list.  Values can be weighted
     - value: black
       weight: 30
 
-```
-
-## RUN template
-
-```
-ruby fake_csv.rb categories
 ```
 
 

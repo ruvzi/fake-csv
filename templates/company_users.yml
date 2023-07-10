@@ -17,3 +17,5 @@ data:
       list:
         - admin
         - user
+  - name: uuid
+    type: uuid

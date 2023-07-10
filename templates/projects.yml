@@ -27,3 +27,5 @@ data:
     options:
       min: 2023-05-01
       max: today
+  - name: uuid
+    type: uuid

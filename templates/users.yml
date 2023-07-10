@@ -17,3 +17,5 @@ data:
     type: name
   - name: phone
     type: phone
+  - name: uuid
+    type: uuid
