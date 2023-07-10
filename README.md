@@ -83,6 +83,13 @@ Selects a value from a supplied list.  Values can be weighted
 
 ```
 
+## RUN template
+
+```
+ruby fake_csv.rb categories
+```
+
+
 ## Example output
 
 ```
