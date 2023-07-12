@@ -1,4 +1,5 @@
 .idea
 /csv/*.csv
+/csv/fake_files/*.csv
 .bundle/cache
-vendor
+vendor/bundle
