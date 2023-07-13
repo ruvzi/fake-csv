@@ -60,6 +60,10 @@ class FakeData
     Faker::Company.name
   end
 
+  def department
+    Faker::Commerce.department(max: 1)
+  end
+
   def company_business_id
     Faker::Company.spanish_organisation_number
   end

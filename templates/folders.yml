@@ -1,0 +1,17 @@
+---
+rows: 240
+data:
+  - name: name
+    type: department
+  - name: user_id
+    type: cycle
+    options:
+      min: 1
+      max: 20
+  - name: company_id
+    type: integer
+    options:
+      min: 1
+      max: 40
+  - name: uuid
+    type: uuid
